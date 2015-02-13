@@ -1,0 +1,790 @@
+@charset "utf-8";
+/* CSS Document */
+
+/* ===================================================================
+ Reset STYLE
+=================================================================== */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0 0px;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	line-height: 1;
+	background: url(img/bg_suport.png),url(img/bg.jpg);
+	background-repeat: no-repeat, no-repeat;
+	background-position: bottom , top;
+	color: #000;
+}
+
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary {
+	display: block;
+}
+
+nav ul,
+ul li {
+	list-style: none;
+}
+
+blockquote, q {
+	quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+
+a {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+ins {
+	background-color: #ff9;
+	color: #000;
+	text-decoration: none;
+}
+
+mark {
+	background-color: #ff9;
+	color: #000; 
+	font-style: italic;
+	font-weight: bold;
+}
+
+del {
+	text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+	border-bottom: 1px dotted #000;
+	cursor: help;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+hr {
+	display: block;
+	height: 1px;
+	border: 0;
+	border-top: 1px solid #cccccc;
+	margin: 1em 0;
+	padding: 0;
+}
+
+input, select {
+	vertical-align: middle;
+}/*
+Copyright (c) 2010, Yahoo! Inc. All rights reserved.
+Code licensed under the BSD License:
+http://developer.yahoo.com/yui/license.html
+version: 2.8.1
+*/
+body{font:13px/1.231 arial,helvetica,clean,sans-serif;*font-size:small;*font:x-small;}select,input,button,textarea,button{font:99% arial,helvetica,clean,sans-serif;}table{font-size:inherit;font:100%;}pre,code,kbd,samp,tt{font-family:monospace;*font-size:108%;line-height:100%;}
+/*----------------------------------------------------
+	共通
+----------------------------------------------------*/
+/* スクロールバーの有無によるズレ対策 */
+html {
+	overflow-y: scroll;
+}
+
+body {
+	font-family: "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+}
+
+input, textarea {
+	font-family: "メイリオ", Meiryo, "Hiragino Kaku Gothic Pro", "ヒラギノ角ゴ Pro W3", "ＭＳ Ｐゴシック", "Lucida Grande", "Lucida Sans Unicode", Arial, Verdana, sans-serif;
+}
+
+/* for IE6 */
+* html body {
+	font-family: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+}
+* html input, * html textarea {
+	font-family: "ＭＳ Ｐゴシック", "MS PGothic", Sans-Serif;
+}
+
+/* リンク
+----------------------------------------------------*/
+a {
+}
+
+a:link {
+}
+
+a:visited {
+}
+
+a:hover {
+}
+
+a:active {
+}
+
+/* よく使いそうなCSS3
+----------------------------------------------------*/
+#selectors {
+/* 角丸 */
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+
+/* 角丸個別 */
+	-webkit-border-top-right-radius: 15px;
+	-moz-border-radius-topright: 15px;
+	border-top-right-radius: 15px;
+
+/* ボックスに影 */
+	-webkit-box-shadow: 1px 1px 3px #999;
+	-moz-box-shadow: 1px 1px 3px #999;
+	box-shadow: 1px 1px 3px #999;
+
+/* テキストに影 */
+	text-shadow: 1px 1px 0px #999;
+}
+
+.shadow {
+    margin-top: 5px; /* 画像の上の余白*/
+    display: inline-block; 
+    box-shadow: 0px 5px 15px -5px rgba(0, 0, 0, 0.8); /*横方向　下方向　ぼかし　広がり　色 */
+}
+
+/* 汎用
+----------------------------------------------------*/
+/* clerfix */
+#contents:after {
+	content: "."; display: block; visibility: hidden; height: 0.1px; font-size: 0.1em; line-height: 0; clear: both;
+}
+
+.imgR {
+	float: right;
+	margin: 0 0 10px 10px;
+}
+
+.imgL {
+	float: left;
+	margin: 0 10px 10px 0;
+}
+
+.tC,
+.btn {
+	text-align: center;
+}
+
+.tR,
+.sign {
+	text-align: right;
+}
+.mt0 { margin-top: 0 !important; }
+.mb0 { margin-bottom: 0 !important; }
+
+	* html .clearfix {
+		zoom: 1;
+	}
+
+	*+html .clearfix {
+		zoom: 1;
+	}
+
+.clearfix:after {
+	height: 0;
+	visibility: hidden;
+	content: ".";
+	display: block;
+	clear: both;
+}
+
+/*----------------------------------------------------
+	#header
+----------------------------------------------------*/
+/*#header  {
+	background: url(file:///C|/Users/takanakano/Desktop/wise1002/img/header_bg.gif) repeat-x;
+	
+}
+*/
+	#header{
+		position:fixed;
+		height: 65px;
+		display:block;
+		width: 100%;
+/*		background: #333;
+*/		z-index:9;
+		text-align:center;
+		color: #f2f2f2;
+		padding: 20px 0 0 0;
+	}
+
+	#header{
+		top:0px;
+	}
+
+#h_button1 {
+	position: absolute;
+	top: 35px;
+	left: 1050px;
+}
+
+
+#h_button2 {
+	position: absolute;
+	top: 35px;
+	left: 1120px;
+}
+
+#h_button3 {
+	position: absolute;
+	top: 35px;
+	left: 1190px;
+}
+
+#h_button4 {
+	position: absolute;
+	top: 95px;
+	left: 1050px;
+}
+#h_button5 {
+	position: absolute;
+	top: 150px;
+	left: 1050px;
+}
+
+/*----------------------------------------------------
+	#page（ページ全体）
+----------------------------------------------------*/
+html, body{
+	min-width: 1000px;
+	min-height: 770px;
+	height: 100%;
+	width: 100%;
+}
+body {
+	position: relative;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	color: #FFCC00;
+	background: url(img/bg1.jpg) top center;
+	 background-attachment:fixed;
+}
+#page {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	font-size: 100%}
+
+
+ul.sdt_menu{
+	margin:0;
+	padding:0;
+	list-style: none;
+	font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size:14px;
+	width:900px;
+}
+ul.sdt_menu a{
+	text-decoration:none;
+	outline:none;
+		font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size:14px;
+
+}
+ul.sdt_menu li{
+	float:left;
+	width:150px;
+	height:65px;
+	position:relative;
+	cursor:pointer;
+}
+ul.sdt_menu li > a{
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:150px;
+	height:65px;
+	z-index:12;
+	background:transparent url(../images/overlay.png) no-repeat bottom right;
+	-moz-box-shadow:0px 0px 2px #000 inset;
+	-webkit-box-shadow:0px 0px 2px #000 inset;
+	box-shadow:0px 0px 2px #000 inset;
+}
+ul.sdt_menu li a img{
+	border:none;
+	position:absolute;
+	width:0px;
+	height:0px;
+	bottom:0px;
+	left:85px;
+	z-index:100;
+	-moz-box-shadow:0px 0px 4px #000;
+	-webkit-box-shadow:0px 0px 4px #000;
+	box-shadow:0px 0px 4px #000;
+}
+ul.sdt_menu li span.sdt_wrap{
+	position:absolute;
+	top:25px;
+	left:0px;
+	width:150px;
+	height:60px;
+	z-index:15;
+}
+ul.sdt_menu li span.sdt_active{
+	position:absolute;
+	background:#111;
+	top:65px;
+	width:150px;
+	height:0px;
+	left:0px;
+	z-index:14;
+	-moz-box-shadow:0px 0px 4px #000 inset;
+	-webkit-box-shadow:0px 0px 4px #000 inset;
+	box-shadow:0px 0px 4px #000 inset;
+}
+ul.sdt_menu li span span.sdt_link,
+ul.sdt_menu li span span.sdt_descr,
+ul.sdt_menu li div.sdt_box a{
+	margin-left:15px;
+	text-transform:uppercase;
+	text-shadow:1px 1px 1px #000;
+}
+ul.sdt_menu li span span.sdt_link{
+	color:#fff;
+	font-size:18px;
+	float:left;
+	clear:both;
+}
+/*ul.sdt_menu li span span.sdt_descr{
+	color:#0B75AF;
+	float:left;
+	clear:both;
+	width:155px; /*For dumbass IE7
+	font-size:8px;
+	letter-spacing:2px;
+}
+*/
+ul.sdt_menu li div.sdt_box{
+	display:block;
+	position:absolute;
+	width:150px;
+	overflow:hidden;
+	height:115px;
+	top:65px;
+	left:0px;
+	display:none;
+	background:#000;
+	z-index:100;
+}
+ul.sdt_menu li div.sdt_box a{
+	float:left;
+	clear:both;
+	line-height:25px;
+	color:#0B75AF;
+}
+ul.sdt_menu li div.sdt_box a:first-child{
+	margin-top:12px;
+}
+ul.sdt_menu li div.sdt_box a:hover{
+	color:#fff;
+}
+
+.text  {
+	position: absolute;
+	top: 150px;
+	width: 100%;
+	margin-top: 50px;
+	z-index: -100;
+	
+}
+
+/*----------------------------------------------------
+	#コンテンツ全般
+----------------------------------------------------*/
+.section {
+/*	background:url(img/bg.jpg) top center;
+	background-color: #000000;
+*/
+}
+
+/*.section p {
+	font-size:18px;
+	text-align: left;
+	margin-left: 40%;
+	padding-right: 100px;
+	line-height: 1.5em;
+	color: #FFFFFF;
+}*/
+
+#section1 p {
+	font-size:18px;
+	text-align: left;
+	margin-left: 40%;
+	padding-right: 100px;
+	line-height: 1.5em;
+	color: #FFFFFF;
+}
+
+#section2 p {
+	font-size:18px;
+	text-align: left;
+	margin-left: 40%;
+	padding-right: 100px;
+	line-height: 1.5em;
+	color: #FFFFFF;
+}
+
+#section3 p {
+	font-size:18px;
+	text-align: left;
+	margin-left: 40%;
+	padding-right: 100px;
+	line-height: 1.5em;
+	color: #FFFFFF;
+}
+
+#section4 p {
+	font-size:14px;
+	text-align: left;
+	margin-left: 40%;
+	padding-right: 100px;
+	line-height: 1.5em;
+	color: #FFFFFF;
+}
+
+/*----------------------------------------------------
+	#ページコンテンツ
+----------------------------------------------------*/
+.top img {
+	margin: 0 auto;
+	width: 100%;
+/*	height: 1200px;
+    background: url(../img/top1.jpg) top center ;
+*/
+}
+
+.news {
+	position: absolute;
+	top: 47%;
+	right: 0%;
+/*	float: left;
+*/	width: 500px;
+	height: 238px;
+/*	margin-top: 220px;
+	margin-left:120px;
+	padding-left: 10px;
+*/	background-color: rgba(0,0,0,0.8);
+	z-index: 99;
+}
+
+.gaiyou {
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.jigyou {
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.kamotsu {
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+
+.left_box {
+	width:550px;
+	float: left;
+	margin-left:  75px;
+	
+}
+.left_box2 {
+	width:400px;
+	float: left;
+	margin-left:  75px;
+	
+}
+.left_box3 {
+	width:750px;
+	float: left;
+	margin-left:  75px;
+}
+
+.left_box4 {
+	width:250px;
+	float: left;
+	margin-left:  75px;
+	
+}
+.right_box {
+	width: 620px;
+	height: 450px;
+	overflow: hidden;
+	position: relative;
+	margin-left: 50%;
+	padding-left: 10px;
+	
+}
+.right_box1 {
+	width: 720px;
+	height: 450px;
+	overflow: hidden;
+	position: relative;
+	padding-left: 10px;
+	
+}
+.right_box2 {
+	width: 700px;
+	height: 450px;
+	overflow: hidden;
+	position: relative;
+	padding-left: 10px;
+	
+}
+.right_p {	
+	width: 720px;
+	height: 450px;
+	background-color: #EF9495;
+	overflow: hidden;
+/*	margin-left: 40%;
+*/
+}
+
+.gaiyou_box {
+	width: 620px;
+	height: 450px;
+	 /*overflow-y: scroll;   /* スクロール表示 */ 
+	<!--overflow-y: hidden;-->
+	<!--overflow-x: hidden;-->
+	position: relative;
+	margin-left: 48%;
+	padding-left: 10px;
+	
+}
+
+#slide1 table {
+	background-color: #232323;
+    width: 620px;
+	font-size: 14px;
+	text-align: center;
+	position: relative;
+	padding-left: 10px;
+	line-height: 1.5em;
+	color: #fff;
+	border: 1px solid #999;
+}
+
+#slide1 th{
+	text-align: left;
+	padding: 5px 25px 5px 25px;
+		border: 1px solid #666;
+
+}
+
+#slide1 td{
+	text-align: left;
+	padding: 5px 25px 5px 25px;
+		border: 1px solid #666;
+
+}
+
+#slide2 table {
+/*	background-color: #fff;
+*/    width: 620px;
+	font-size: 15px;
+	text-align: center;
+	position: relative;
+	margin-top: 75px;
+	margin-left: 15px;
+	padding-left: 20px;
+	line-height: 1.5em;
+	color: #fff;
+	overflow: hidden;
+
+/*	border: 1px solid #999;
+*/}
+
+#slide2 td{
+	text-align: left;
+	padding: 5px 25px 5px 25px;
+}
+
+#slide3 table {
+	background-color: #232323;
+    width: 620px;
+	font-size: 14px;
+	text-align: center;
+	position: relative;
+	padding-left: 10px;
+	line-height: 1.5em;
+	color: #fff;
+	border: 1px solid #999;
+}
+
+#slide3 th{
+	text-align: left;
+	padding: 5px 25px 5px 25px;
+		border: 1px solid #666;
+
+}
+
+#slide3 td{
+	text-align: left;
+	padding: 5px 25px 5px 25px;
+		border: 1px solid #666;
+
+}
+
+#slide4 table {
+	width: 720px;
+	font-size: 16px;
+	text-align: left;
+	position: relative;
+	padding-left: 10px;
+	margin-top: 75px;
+	line-height: 1.5em;
+	color: #fff;
+	border: none;
+}
+#slide4 td{
+	text-align: left;
+	padding: 5px 25px 5px 25px;
+}
+
+#slide5 table {
+	width: 700px;
+	font-size: 16px;
+	text-align: left;
+	position: relative;
+	padding-left: 10px;
+	margin-top: 75px;
+	line-height: 1.5em;
+	color: #fff;
+	border: none;
+}
+#slide5 td{
+	text-align: left;
+	padding: 5px 25px 5px 25px;
+}
+
+#recrui_link {
+	width: 700px;
+	margin-left: 25px;
+	margin-top: 25px;
+}
+
+#recrui_link li {
+	margin-left: 25px;
+}
+
+.block {
+	width: 660px;
+	height: 255px;
+	background-color: #232323;
+	margin-left: 25px;
+	
+}
+
+.lorry {
+	float: left;
+	margin: 6px 5px 6px 5px;
+	
+}
+
+
+/*----------------------------------------------------
+	#CSV読み込み
+----------------------------------------------------*/
+.csv   {
+	width: 670px;
+	height: 245px;
+	margin-left: 25px;
+	overflow-x:hidden;
+}
+
+iframe {
+	overflow-x: hidden;
+}
+
+/*----------------------------------------------------
+	#Footer
+----------------------------------------------------*/
+   #footer{
+	   position:fixed;
+		height: 85px;
+		display:block;
+		width: 100%;
+		background: #333;
+		z-index:9;
+/*		text-align:center;
+*/		color: #f2f2f2;
+		padding: 5px 0 0 0;
+	}
+	#footer{
+		bottom:0px;
+	}
+	
+	.logo {
+		float: left;
+	}
+	
+	.branch1 {
+		width: 330px;
+		height: 85px;
+/*		background-color: #000;
+*/		float: left;
+        margin-left: 5px;
+		text-align: left;
+		font-size: 12px;
+		color: #cfcfcf;
+		z-index: 10;
+	}
+	.branch2 {
+		width: 250px;
+		height: 85px;
+/*		background-color: #000;
+*/		float: left;
+		text-align: left;
+		font-size: 12px;
+		color: #cfcfcf;
+		z-index: 10;
+	}
+	.branch2 p{
+		font-size: 12px;
+		padding: 2px;
+	}
+
+
+/* copyright
+----------------------------------------------------*/
+footer#globalFooter p.copyright {
+	text-align: center;
+}
+
+footer#globalFooter p.copyright small {
+}

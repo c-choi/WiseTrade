@@ -1,0 +1,86 @@
+@charset "utf-8";
+/* CSS Document */
+* ===================================================================
+ Reset STYLE
+=================================================================== */
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0 0px;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+body {
+	width: 600px;
+	margin: 0 auto;
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-size: 14px;
+	padding-left: 10px;
+	overflow: hidden;
+	background-color: #fff;
+}
+
+a {
+	font-family:"ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+	font-weight:400;
+	color: #fff;
+	text-decoration: none;
+}
+
+#wrap{
+	position:relative;
+	height: 50%;
+	
+}
+
+.btn {
+	background: -moz-linear-gradient(top,#BFD9E5, #3D95B7 50%,#0080B3 50%,#0099CC);
+	background: -webkit-gradient(linear, left top, left bottom, from(#BFD9E5), color-stop(0.5,#3D95B7), color-stop(0.5,#0080B3), to(#0099CC));
+	color: #FFF;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+	border: 1px solid #0099CC;
+	-moz-box-shadow: 1px 1px 1px rgba(000,000,000,0.3),inset 0px 0px 3px rgba(255,255,255,0.5);
+	-webkit-box-shadow: 1px 1px 1px rgba(000,000,000,0.3),inset 0px 0px 3px rgba(255,255,255,0.5);
+	text-shadow: 0px 0px 3px rgba(0,0,0,0.5);
+	width: 100px;
+	padding: 10px 0;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.inline_block{
+    width: 600px;
+    height: 600px;
+    background: #fff;
+    display: block;
+    text-align: center;
+}
+.inline_block > *{
+    vertical-align: middle;
+    display: inline-block;
+    zoom: 1; /* Fix for IE7 */
+    *display: inline; /* Fix for IE7 */
+}
+.inline_block span {
+    height: 100%;
+    width: 0px;
+    display: inline-block;
+    zoom: 1; /* Fix for IE7 */
+    *display: inline; /* Fix for IE7 */
+}
