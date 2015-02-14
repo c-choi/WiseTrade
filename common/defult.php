@@ -1,0 +1,159 @@
+<?php
+/*
+クライアント：ワイズ
+
+内容1：実績更新プログラム
+機能：画像、テキストのアップロード
+作成日：2008.12.13
+
+内容2：車輌情報更新プログラム
+機能：CSVファイルのアップロード
+作成日：2008.12.13
+
+クライアント：ワイズ
+内容1：荷物情報更新プログラム
+機能：CSVファイルのアップロード
+作成日：2008.12.13
+
+クライアント：ワイズ
+内容1：中古車情報更新プログラム
+機能：CSVファイルのアップロード
+作成日：2008.12.13
+
+*/
+
+
+/*
+初期設定
+*/
+
+define ("DOCUMENT_ROOT", $_SERVER['DOCUMENT_ROOT']);
+define ("ADMINISTRATION_PATH", "");
+define ("ADMINISTRATION_DIR", DOCUMENT_ROOT.ADMINISTRATION_PATH);
+define ("COMMON_FILES_DIR", DOCUMENT_ROOT."/common");
+define ("FREIGHT_FILES_DIR", DOCUMENT_ROOT."/freight");
+define ("ADMINISTRATION_TEMPLATE_DIR", ADMINISTRATION_DIR."/kanri");
+
+//画像のアップロード先フォルダ
+    //実績紹介
+    define ("UPLOAD_LORRYS_IMAGE", "../../images/lorrys/");//管理
+	define ("UPLOAD_LORRYS_IMAGE_PRE", "../images/lorrys/");//プレビュー
+	
+	//中古車販売
+    define ("UPLOAD_USEDCAR_IMAGE", "../../images/usedcar/");
+	
+	//社長ブログ
+    define ("UPLOAD_CEO_IMAGE", "../../images/ceoblog/");
+	define ("UPLOAD_CEO_IMAGE_PRE", "../images/ceoblog/");//プレビュー
+	
+	//社員ブログ
+    define ("UPLOAD_STAFF_IMAGE", "../../images/staffblog/");//管理
+	define ("UPLOAD_STAFF_IMAGE_PRE", "../images/staffblog/");//プレビュー
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+CSVデータ
+*/
+    //実績紹介
+    define ("LORRYS_CSV", "../../csv/lorrys/data.csv");//管理
+	define ("LORRYS_CSV_PRE", "../csv/lorrys/data.csv");//プレビュー
+	
+	//中古車販売
+    define ("USEDCAR_CSV", "../../csv/usedcar/data.csv");//管理
+	define ("USEDCAR_CSV_PRE", "../csv/usedcar/data.csv");//プレビュー
+	
+	//社長ブログ
+    define ("CEO_CSV", "../../csv/ceoblog/data.csv");
+	define ("CEO_CSV_PRE", "../csv/ceoblog/data.csv");//プレビュー
+	
+	//社員ブログ
+	define ("STAFF_CSV", "../../csv/staffblog/data.csv");//管理
+	define ("STAFF_CSV_PRE", "../csv/staffblog/data.csv");//プレビュー
+	
+	//運搬車輌情報
+    define ("UPLOAD_TRANSPORTE_READCSV_DIR", "../csv/transporte/");//ディレクトリ名
+	define ("UPLOAD_TRANSPORTE_CSV", "data.csv");//CSVファイル名
+	
+	//運搬車輌情報
+	define ("UPLOAD_LUGGAGE_READCSV_DIR", "../csv/luggage/");
+    define ("UPLOAD_LUGGAGE_CSV", "data.csv");//CSVファイル名
+	
+	
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+//CSVデータのアップロード先フォルダ
+*/
+
+    //運搬車輌情報
+    define ("UPLOAD_TRANSPORTE_CSV_DIR", "../../csv/transporte/");//ディレクトリ名
+	if(!defined ("UPLOAD_TRANSPORTE_CSV")){ define ("UPLOAD_TRANSPORTE_CSV", "data.csv");}//CSV<83>t<83>@<83>C<83><8b><96>?
+	//define ("UPLOAD_TRANSPORTE_CSV", "data.csv");//CSVファイル名
+ 
+    //荷物情報
+    define ("UPLOAD_LUGGAGE_CSV_DIR", "../../csv/luggage/");//ディレクトリ名
+	if(!defined ("UPLOAD_LUGGAGE_CSV")){ define ("UPLOAD_LUGGAGE_CSV", "data.csv");}//CSV<83>t<83>@<83>C<83><8b><96>?
+	//define ("UPLOAD_LUGGAGE_CSV", "data.csv");//CSVファイル名
+ 
+
+//画面出力エンコード
+    //define ("NO_IMAGE", "");
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝
+管理画面テンプレートセット
+*/
+
+//実績紹介
+    //管理画面
+	define ("TEMPLATE_LORRYS_HTML", "lorrys/index.tpl");
+	
+	
+//中古車販売
+    //管理画面
+	
+	
+//社長ブログ
+    //管理画面
+	
+	
+//スタッフブログ
+    //管理画面
+	
+	
+//フライト（荷物・車輌）
+    //初期及び完了後の戻り
+	define ("TEMPLATE_LORRYS_HTML_A", "index.tpl");
+	
+	//荷物情報アップ後
+	define ("TEMPLATE_LORRYS_HTML_B", "index02.tpl");
+	
+	//車輌情報アップ後
+	define ("TEMPLATE_LORRYS_HTML_C", "index03.tpl");
+	
+
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝	
+プレビュー画面テンプレートセット
+*/
+//フライト（荷物・車輌）
+    //車輌情報
+	define ("TEMPLATE_TRANSPORTE_HTML", "transporte.tpl");
+	
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝	
+ノーイメージ
+*/
+    //実績紹介
+	define ("NO_IMAGE_LORRYS", "noimage.jpg");//プレビュー
+	
+	//社長ブログ
+    define ("NO_IMAGE_CEO", "noimage.gif");//プレビュー
+	
+	//社員ブログ
+    define ("NO_IMAGE_STAFF", "noimage.gif");//プレビュー
+	
+	//中古車販売
+	define ("NO_IMAGE_USEDCAR", "used_noimage.jpg");//プレビュー
+	
+	
+/*＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝＝	
+アップロード設定
+*/
+
+
+?>

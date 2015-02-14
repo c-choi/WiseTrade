@@ -1,0 +1,4 @@
+AuthType Basic
+AuthName "Input your ID and Password."
+AuthUserFile /var/www/vhosts/wise-ltd.net/httpdocs/kanri/ceoblog/passwd.dat
+require valid-user
