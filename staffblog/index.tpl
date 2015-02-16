@@ -15,6 +15,7 @@
 <script type="text/javascript" src="../js/smoothscroll.js"></script>
 </head>
 <body>
+<!--
 <div id="all">
 <div id="header">
 <p class="toanchor"><a href="#CONTENTS" id="TOP" name="TOP"><img src="../img/clear.gif" alt="本文へジャンプします" width="1" height="1"></a></p>
@@ -33,13 +34,13 @@ var myMovie = new FlashObject("../header.swf", "header", "990", "250","8", "#070
 myMovie.addParam("wmode", "transparent");
 myMovie.addVariable("flashVarName", "this is passed in via FlashVars");
 myMovie.write("flashcontent");
-// ここまで見えなくなる -->
+// ここまで見えなくなる
 </script>
-</div><!-- end of flashcontent -->
-</div><!-- end of header03 -->
-</div><!-- end of header02 -->
-</div><!-- end of header -->
-<div id="main">
+</div>
+
+</div>
+</div>
+</div><div id="main">
 <div id="main02">
 <div id="right">
 <p class="toanchor"><a id="CONTENTS" name="CONTENTS"><img src="../img/clear.gif" alt="ここから本文です" width="1" height="1"></a></p>
@@ -48,7 +49,7 @@ myMovie.write("flashcontent");
 <ul class="pankz">
 <li><a href="../top.html">ホーム</a></li>
 <li>&nbsp;&gt;&nbsp;社員ブログ</li>
-</ul>
+</ul>-->
 <div id="blogs">
 
 <!--{def data}--> 
@@ -70,9 +71,9 @@ myMovie.write("flashcontent");
 
 </div><!-- end of blogs -->
 <p class="totop"><a href="#TOP">このページのトップへ</a></p>
-</div><!-- end of right02 -->
+<!--</div>end of right02
 </div><!-- end of right -->
-<div id="left">
+<!--<div id="left">
 <ul>
 <li class="btn01"><a href="../top.html">ホーム</a></li>
 <li class="btn02"><a href="../about/index.html">企業情報</a></li>
@@ -85,10 +86,10 @@ myMovie.write("flashcontent");
 </ul>
 <p><a href="../ceoblog/index.php"><img src="../img/blog_btn01.gif" alt="社長ブログ" width="250" height="120"></a></p>
 <p><a href="index.php"><img src="../img/blog_btn02.gif" alt="社員ブログ" width="250" height="120"></a></p>
-</div><!-- end of left -->
-</div><!-- end of main02 -->
-</div><!-- end of main -->
-</div><!-- end of all -->
+</div>
+</div>
+</div>
+</div>
 <div id="foot">
 <div id="foot02">
 <ul>
@@ -107,8 +108,8 @@ myMovie.write("flashcontent");
 <li class="lastone"><a href="../contact/privacy.html">プライバシーポリシー</a></li>
 </ul>
 <h4>ワイズ通商株式会社&nbsp;〒447-0081&nbsp;愛知県碧南市吹上町4-23-1&nbsp;TEL&nbsp;0566-43-3668&nbsp;&nbsp;FAX&nbsp;0566-43-3848&nbsp;&nbsp;IP&nbsp;050-2014-1486<br>Copyright&nbsp;&copy;&nbsp;2008&nbsp;&nbsp;WISE TSUSHO Co.,ltd.&nbsp;All&nbsp;right&nbsp;reserved.</h4>
-</div><!-- end of foot02 -->
-</div><!-- end of foot -->
+</div>
+</div>-->
 <script type="text/javascript">
 var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
 document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));

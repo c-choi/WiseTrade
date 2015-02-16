@@ -85,6 +85,10 @@ $(document).ready(function(){
 	    	window.location.href = 'index.html#6thPage/1';
 	    	break;
 
+	    case '6thPage/2':
+	    	window.location.href = 'index.html#6thPage/2';
+	    	break;
+			
 	    case '7thPage':
 	    	window.location.href = 'index.html#7thPage';
 	    	break;
