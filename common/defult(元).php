@@ -142,10 +142,10 @@ CSVデータ
 	define ("NO_IMAGE_LORRYS", "noimage.jpg");//プレビュー
 	
 	//社長ブログ
-    define ("NO_IMAGE_CEO");//プレビュー
+    define ("NO_IMAGE_CEO", "noimage.gif");//プレビュー
 	
 	//社員ブログ
-    define ("NO_IMAGE_STAFF");//プレビュー
+    define ("NO_IMAGE_STAFF", "noimage.gif");//プレビュー
 	
 	//中古車販売
 	define ("NO_IMAGE_USEDCAR", "used_noimage.jpg");//プレビュー

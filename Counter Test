@@ -1,0 +1,166 @@
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="ja">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>ワイズ通商株式会社 - WISE TRADE Co.,Ltd</title>
+    <meta name="author" content="Studio PK" />
+    <meta name="description" content="愛知県碧南市に本社があるロジスティックスと人材派遣のワイズ通商株式会社のホームページです。" />
+    <meta name="keywords"  content="愛知,碧南市,運輸,運送,ワイズ通商,人材派遣,大型トラック,トレーラー,ロジスティックス" />
+
+    <link rel="stylesheet" href="css/page_style.css" type="text/css" media="screen"/>
+
+    <link rel="stylesheet" type="text/css" href="css/jquery.fullPage.css" />
+    <link rel="stylesheet" type="text/css" href="css/examples.css" />
+    
+    <style>
+
+    /* Style for our header texts
+    * --------------------------------------- */
+    h1{
+        font-size: 4em;
+        font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+        color: #fff;
+        margin:0;
+        padding:0;
+    }
+    .intro p{
+        color: #fff;
+    }
+
+    /* Centered texts in each section
+    * --------------------------------------- */
+    .section{
+        text-align:center;
+        width: 1380px;
+        margin: 0 auto;
+    }
+
+/*    .slide{
+        width: 1380px;
+        margin: 0 auto;
+    }
+    
+*/  /* Bottom menu
+    * --------------------------------------- */
+    #infoMenu {
+        bottom: 80px;
+    }
+    #infoMenu li a {
+        color: #fff;
+        z-index: 999;
+    }
+
+    </style>
+
+    <!--[if IE]>
+        <script type="text/javascript">
+             var console = { log: function() {} };
+        </script>
+    <![endif]-->
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.1/jquery-ui.min.js"></script>
+
+<!--csv取り込み-->
+<script src="jquery.csv2table-0.02-b-4.7.js" type="text/javascript" charset="utf-8"></script>
+
+    <script type="text/javascript" src="../vendors/jquery.slimscroll.min.js"></script>
+
+    <script type="text/javascript" src="jquery.fullPage.js"></script>
+    <script type="text/javascript" src="examples.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function() {
+            $('#fullpage').fullpage({
+                anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage'],
+                sectionsColor: ['none'],
+                css3: true
+            });
+        });
+    </script>
+<!--シャドーボックス（問合せフォーム等）-->    
+<link type="text/css" href="css/shadowbox.css" rel="stylesheet" media="all" />
+<script type="text/javascript" src="shadowbox.js"></script>
+
+<script type="text/javascript">  
+Shadowbox.init({
+  displayNav: true, //ナビゲーションの表示の有無
+  modal:true, //trueに設定すると、boxを表示させた時に背景をクリックしてもboxが閉じない
+});
+
+</script>
+
+
+
+<script LANGUAGE="JavaScript">
+function GetCookie (name) { 
+var arg = name + "="; 
+var alen = arg.length; 
+var clen = document.cookie.length; 
+var i = 0; 
+while (i < clen) {
+var j = i + alen;   
+if (document.cookie.substring(i, j) == arg)     
+return getCookieVal (j);   
+i = document.cookie.indexOf(" ", i) + 1;   
+if (i == 0) break;  
+} 
+return null;
+}
+function SetCookie (name, value) { 
+var argv = SetCookie.arguments; 
+var argc = SetCookie.arguments.length; 
+var expires = (argc > 2) ? argv[2] : null; 
+var path = (argc > 3) ? argv[3] : null; 
+var domain = (argc > 4) ? argv[4] : null; 
+var secure = (argc > 5) ? argv[5] : false; 
+document.cookie = name + "=" + escape (value) +
+((expires == null) ? "" : ("; expires=" + expires.toGMTString())) +
+((path == null) ? "" : ("; path=" + path)) + 
+((domain == null) ? "" : ("; domain=" + domain)) +   
+((secure == true) ? "; secure" : "");
+}
+function DeleteCookie (name) { 
+var exp = new Date(); 
+exp.setTime (exp.getTime() - 1);  
+var cval = GetCookie (name); 
+document.cookie = name + "=" + cval + "; expires=" + exp.toGMTString();
+}
+var expDays = 30;
+var exp = new Date();
+exp.setTime(exp.getTime() + (expDays*24*60*60*1000));
+function amt(){
+var count = GetCookie('count')
+if(count == null) {
+SetCookie('count','1')
+return 1
+}
+else {
+var newcount = parseInt(count) + 1;
+DeleteCookie('count')
+SetCookie('count',newcount,exp)
+return count
+   }
+}
+function getCookieVal(offset) {
+var endstr = document.cookie.indexOf (";", offset);
+if (endstr == -1)
+endstr = document.cookie.length;
+return unescape(document.cookie.substring(offset, endstr));
+}
+// End -->
+</script>
+ </head>
+
+<!-- STEP TWO: Copy this code into the BODY of your HTML document  -->
+<body>
+<script LANGUAGE="JavaScript">
+<!-- Begin
+document.write("あなたは 総カウント数<b>" + amt() + "番目の訪問者です")
+// End -->
+</script>
+<input type="button" onclick="DeleteCookie('count')" value="Reset Cookies"/>
+</body>
+</html>
